@@ -1,5 +1,6 @@
 package com.example.projectshowcase.ui.StoryTwoInput;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
@@ -14,7 +15,7 @@ import android.view.ViewGroup;
 
 import com.example.projectshowcase.R;
 
-public class StoryTwoInput extends Fragment {
+public class StoryTwoInput extends AppCompatActivity {
 
     private StoryTwoInputViewModel mViewModel;
 
@@ -22,7 +23,6 @@ public class StoryTwoInput extends Fragment {
         return new StoryTwoInput();
     }
 
-    @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_story_two_input, container, false);

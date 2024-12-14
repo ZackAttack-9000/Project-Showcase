@@ -34,7 +34,7 @@
         <EditText
             android:id="@+id/editTextText2"
             android:layout_width="match_parent"
-            android:layout_height="80sp"
+            android:layout_height="70sp"
             android:ems="10"
             android:textColor="#000000"
             android:inputType="text"
@@ -43,7 +43,7 @@
         <EditText
             android:id="@+id/editTextText3"
             android:layout_width="match_parent"
-            android:layout_height="80sp"
+            android:layout_height="70sp"
             android:textColor="#000000"
             android:ems="10"
             android:inputType="text"
@@ -52,7 +52,7 @@
         <EditText
             android:id="@+id/editTextText4"
             android:layout_width="match_parent"
-            android:layout_height="80sp"
+            android:layout_height="70sp"
             android:ems="10"
             android:textColor="#000000"
             android:inputType="text"
@@ -61,7 +61,7 @@
         <EditText
             android:id="@+id/editTextText5"
             android:layout_width="match_parent"
-            android:layout_height="80sp"
+            android:layout_height="70sp"
             android:ems="10"
             android:inputType="text"
             android:textColor="#000000"
@@ -70,7 +70,7 @@
         <EditText
             android:id="@+id/editTextText6"
             android:layout_width="match_parent"
-            android:layout_height="80sp"
+            android:layout_height="70sp"
             android:ems="10"
             android:textColor="#000000"
             android:inputType="text"
@@ -79,7 +79,7 @@
         <EditText
             android:id="@+id/editTextText7"
             android:layout_width="match_parent"
-            android:layout_height="80sp"
+            android:layout_height="70sp"
             android:ems="10"
             android:textColor="#000000"
             android:inputType="text"
@@ -88,7 +88,7 @@
         <EditText
             android:id="@+id/editTextText8"
             android:layout_width="match_parent"
-            android:layout_height="80sp"
+            android:layout_height="70sp"
             android:ems="10"
             android:textColor="#000000"
             android:inputType="text"
@@ -97,11 +97,22 @@
         <EditText
             android:id="@+id/editTextText9"
             android:layout_width="match_parent"
-            android:layout_height="80sp"
+            android:layout_height="70sp"
             android:ems="10"
             android:inputType="text"
             android:textColor="#000000"
             android:text="Something you may find in the city" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20sp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:backgroundTint="#1D1717"
+            android:layout_height="wrap_content"
+            android:text="Submit" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
