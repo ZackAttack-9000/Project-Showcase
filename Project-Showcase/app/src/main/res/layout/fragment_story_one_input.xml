@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#FF6F00"
     tools:ignore="HardcodedText"
-    tools:context=".ui.StoryOneInput.StoryOneInputAppCompat">
+    tools:context=".ui.StoryOneInput.StoryOneInput">
 
     <LinearLayout
         android:layout_width="fill_parent"

@@ -25,6 +25,12 @@
     <fragment
         android:id="@+id/nav_number_guesser"
         android:label="@string/menu_home"
-        android:name="com.example.projectshowcase.ui.numberguesser.numberguesserFragment"
+        android:name="com.example.projectshowcase.ui.NumberGuessingGame.NumberGuessingGame"
         tools:layout="layout/fragment_number_guesser.xml"/>
+    <fragment
+        android:id="@+id/frameLayout2"
+        android:label="@string/menu_home"
+        android:name="com.example.projectshowcase.ui.StoryOneInput.StoryOneInput"
+        tools:layout="layout/fragment_story_one_input.xml"/>
+
 </navigation>

@@ -6,19 +6,28 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Random;
+import java.util.concurrent.atomic.AtomicInteger;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.projectshowcase.R;
 import com.example.projectshowcase.databinding.FragmentGalleryBinding;
-import com.example.projectshowcase.ui.StoryOneInput.StoryOneInputAppCompat;
+import com.example.projectshowcase.ui.StoryOneInput.StoryOneInput;
 import com.example.projectshowcase.ui.StoryThreeInput.StoryThreeInput;
 import com.example.projectshowcase.ui.StoryTwoInput.StoryTwoInput;
+import com.example.projectshowcase.ui.gallery.GalleryViewModel;
+import com.example.projectshowcase.ui.StoryResult.StoryResult;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+
 import com.google.android.material.snackbar.Snackbar;
 
 public class GalleryFragment extends Fragment {
@@ -42,8 +51,12 @@ public class GalleryFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         SelectWords();
+    }
+
+    public void onSubmitStory() {
+        StoryOneInput storyOneInput = new StoryOneInput();
+        storyOneInput.SubmitStory();
     }
 
     public void SelectWords(){
@@ -53,34 +66,71 @@ public class GalleryFragment extends Fragment {
         Button StartThree = requireView().findViewById(R.id.button4);
 
         StartOne.setOnClickListener(v -> {
-            Intent InputWordsOne = new Intent(getActivity(), StoryOneInputAppCompat.class);
-            startActivity(InputWordsOne);
+            StartOne.setVisibility(View.INVISIBLE);
+            StartTwo.setVisibility(View.INVISIBLE);
+            StartThree.setVisibility(View.INVISIBLE);
+            Random.setVisibility(View.INVISIBLE);
+            LayoutInflater inflater = getLayoutInflater();
+            ViewGroup frameLayout = requireView().findViewById(R.id.frameLayout);
+            View inflate = inflater.inflate(R.layout.fragment_story_one_input, frameLayout);
+            inflate.setVisibility(View.VISIBLE);
+
         });
 
         StartTwo.setOnClickListener(v -> {
-            Intent InputWordsTwo = new Intent(getActivity(), StoryTwoInput.class);
-            startActivity(InputWordsTwo);
+            StartOne.setVisibility(View.INVISIBLE);
+            StartTwo.setVisibility(View.INVISIBLE);
+            StartThree.setVisibility(View.INVISIBLE);
+            Random.setVisibility(View.INVISIBLE);
+            LayoutInflater inflater = getLayoutInflater();
+            ViewGroup frameLayout = requireView().findViewById(R.id.frameLayout);
+            View inflate = inflater.inflate(R.layout.fragment_story_two_input, frameLayout);
+            inflate.setVisibility(View.VISIBLE);
         });
 
         StartThree.setOnClickListener(v -> {
-            Intent InputWordsThree = new Intent(getActivity(), StoryThreeInput.class);
-            startActivity(InputWordsThree);
+            StartOne.setVisibility(View.INVISIBLE);
+            StartTwo.setVisibility(View.INVISIBLE);
+            StartThree.setVisibility(View.INVISIBLE);
+            Random.setVisibility(View.INVISIBLE);
+            LayoutInflater inflater = getLayoutInflater();
+            ViewGroup frameLayout = requireView().findViewById(R.id.frameLayout);
+            View inflate = inflater.inflate(R.layout.fragment_story_three_input, frameLayout);
+            inflate.setVisibility(View.VISIBLE);
         });
 
         Random.setOnClickListener(v -> {
             Random RandInt = new Random();
             int StoryPick = RandInt.nextInt(5);
             if(StoryPick < 1){
-                Intent InputWordsOne = new Intent(getActivity(), StoryOneInputAppCompat.class);
-                startActivity(InputWordsOne);
+                StartOne.setVisibility(View.INVISIBLE);
+                StartTwo.setVisibility(View.INVISIBLE);
+                StartThree.setVisibility(View.INVISIBLE);
+                Random.setVisibility(View.INVISIBLE);
+                LayoutInflater inflater = getLayoutInflater();
+                ViewGroup frameLayout = requireView().findViewById(R.id.frameLayout);
+                View inflate = inflater.inflate(R.layout.fragment_story_one_input, frameLayout);
+                inflate.setVisibility(View.VISIBLE);
             }
             else if(StoryPick < 3){
-                Intent InputWordsTwo = new Intent(getActivity(), StoryTwoInput.class);
-                startActivity(InputWordsTwo);
+                StartOne.setVisibility(View.INVISIBLE);
+                StartTwo.setVisibility(View.INVISIBLE);
+                StartThree.setVisibility(View.INVISIBLE);
+                Random.setVisibility(View.INVISIBLE);
+                LayoutInflater inflater = getLayoutInflater();
+                ViewGroup frameLayout = requireView().findViewById(R.id.frameLayout);
+                View inflate = inflater.inflate(R.layout.fragment_story_two_input, frameLayout);
+                inflate.setVisibility(View.VISIBLE);
             }
             else if(StoryPick < 5){
-                Intent InputWordsThree = new Intent(getActivity(), StoryThreeInput.class);
-                startActivity(InputWordsThree);
+                StartOne.setVisibility(View.INVISIBLE);
+                StartTwo.setVisibility(View.INVISIBLE);
+                StartThree.setVisibility(View.INVISIBLE);
+                Random.setVisibility(View.INVISIBLE);
+                LayoutInflater inflater = getLayoutInflater();
+                ViewGroup frameLayout = requireView().findViewById(R.id.frameLayout);
+                View inflate = inflater.inflate(R.layout.fragment_story_three_input, frameLayout);
+                inflate.setVisibility(View.VISIBLE);
             }
             else{
                 Snackbar.make(getView(), "An error Occurred, try again", Snackbar.LENGTH_LONG)
@@ -89,6 +139,7 @@ public class GalleryFragment extends Fragment {
             }
         });
     }
+
 
 
     @Override
