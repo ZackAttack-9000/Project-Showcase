@@ -10,18 +10,16 @@ import android.widget.TextView;
 
 import java.util.Random;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.projectshowcase.R;
 import com.example.projectshowcase.databinding.FragmentGalleryBinding;
-import com.example.projectshowcase.ui.StoryOneInput.StoryOneInput;
+import com.example.projectshowcase.ui.StoryOneInput.StoryOneInputAppCompat;
 import com.example.projectshowcase.ui.StoryThreeInput.StoryThreeInput;
 import com.example.projectshowcase.ui.StoryTwoInput.StoryTwoInput;
-import com.example.projectshowcase.ui.home.HomeFragment;
 import com.google.android.material.snackbar.Snackbar;
-
-import java.util.Random;
 
 public class GalleryFragment extends Fragment {
 
@@ -40,6 +38,14 @@ public class GalleryFragment extends Fragment {
         return root;
     }
 
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        SelectWords();
+    }
+
     public void SelectWords(){
         Button StartOne = requireView().findViewById(R.id.button2);
         Button StartTwo = requireView().findViewById(R.id.button);
@@ -47,7 +53,7 @@ public class GalleryFragment extends Fragment {
         Button StartThree = requireView().findViewById(R.id.button4);
 
         StartOne.setOnClickListener(v -> {
-            Intent InputWordsOne = new Intent(getActivity(), StoryOneInput.class);
+            Intent InputWordsOne = new Intent(getActivity(), StoryOneInputAppCompat.class);
             startActivity(InputWordsOne);
         });
 
@@ -65,7 +71,7 @@ public class GalleryFragment extends Fragment {
             Random RandInt = new Random();
             int StoryPick = RandInt.nextInt(5);
             if(StoryPick < 1){
-                Intent InputWordsOne = new Intent(getActivity(), StoryOneInput.class);
+                Intent InputWordsOne = new Intent(getActivity(), StoryOneInputAppCompat.class);
                 startActivity(InputWordsOne);
             }
             else if(StoryPick < 3){

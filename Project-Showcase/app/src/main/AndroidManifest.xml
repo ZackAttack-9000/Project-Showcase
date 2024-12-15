@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.StoryOneInput.StoryOneInput"
+            android:name=".ui.StoryOneInput.StoryOneInputAppCompat"
             android:exported="true"
             android:theme="@style/Theme.ProjectShowcase.NoActionBar" />
         <activity
@@ -35,9 +35,6 @@
             android:name=".ui.StoryThreeInput.StoryThreeInput"
             android:exported="true"
             android:theme="@style/Theme.ProjectShowcase.NoActionBar" />
-
-
-
     </application>
 
 </manifest>
