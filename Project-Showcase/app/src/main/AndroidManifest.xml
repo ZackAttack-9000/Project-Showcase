@@ -32,10 +32,8 @@
             android:name=".ui.StoryThreeInput.StoryThreeInput"
             android:exported="true"
             android:theme="@style/Theme.ProjectShowcase.NoActionBar" />
-        <activity
-            android:name=".ui.StoryOneInput.StoryOneInput"
-            android:exported="true"
-            android:theme="@style/Theme.ProjectShowcase.NoActionBar" />
+
+
 
 
     </application>
