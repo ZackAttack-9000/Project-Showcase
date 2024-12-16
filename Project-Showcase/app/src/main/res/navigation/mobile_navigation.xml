@@ -32,9 +32,11 @@
         tools:layout="@layout/fragment_number_guessing_game"
         android:label="Number Guessing Game"/>
     <fragment
-        android:id="@+id/frameLayout2"
-        android:label="@string/menu_home"
-        android:name="com.example.projectshowcase.ui.StoryOneInput.StoryOneInput"
-        tools:layout="layout/fragment_story_one_input.xml"/>
+        android:id="@id/nav_credits"
+        android:label="Credits"
+        android:name="com.example.projectshowcase.ui.Credits.CreditsFragment"
+        tools:layout="@layout/fragment_credits"/>
+
+
 
 </navigation>

@@ -110,9 +110,9 @@
         <Button
             android:id="@+id/button5"
             android:layout_width="match_parent"
-            android:backgroundTint="#1D1717"
             android:layout_height="wrap_content"
-            android:text="Submit" />
+            android:backgroundTint="#1D1717"
+            android:text="Submit (Broken)" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -49,7 +49,13 @@ public class SlideshowFragment extends Fragment {
                 String sciFiFirstName = firstName.substring(0, 2) + lastName.substring(lastName.length() - 2);
                 String sciFiLastName = city.substring(0, 4) + school.substring(school.length() - 3);
                 String sciFiOrigin = pet.substring(0, 3) + sibling.substring(sibling.length() - 2);
+
+
+
                 String sciFiName = sciFiFirstName + " " + sciFiLastName + " " + sciFiOrigin;
+
+
+
                 binding.textView24.setText("Your New Scifi name is: " + sciFiName);
 
 

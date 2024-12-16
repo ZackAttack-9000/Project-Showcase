@@ -22,14 +22,16 @@ import java.util.concurrent.atomic.AtomicInteger;
 
     public class NumberGuessingGame extends Fragment {
 
+        protected int Score = 0;
+
         private NumberGuessingGameViewModel mViewModel;
 
+        @SuppressLint("SetTextI18n")
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View view = inflater.inflate(R.layout.fragment_number_guessing_game, container, false);
             return view; // Return the inflated view
         }
-
         public NumberGuessingGame newInstance() {
             return new NumberGuessingGame();
         }
@@ -37,6 +39,8 @@ import java.util.concurrent.atomic.AtomicInteger;
         @Override
         public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
             super.onViewCreated(view, savedInstanceState);
+            TextView ScoreText = requireView().findViewById(R.id.textView25);
+            ScoreText.setText("Score: " + Score);
             GuessingGame();
         }
 
@@ -49,6 +53,7 @@ import java.util.concurrent.atomic.AtomicInteger;
             TextView Reply = requireView().findViewById(R.id.textView20);
             TextView Guesses = requireView().findViewById(R.id.textView21);
             EditText GuessNumber = requireView().findViewById(R.id.editTextNumber);
+            TextView ScoreText = requireView().findViewById(R.id.textView25);
             AtomicInteger guesses = new AtomicInteger();
 
             Guess.setOnClickListener(v -> {
@@ -61,6 +66,8 @@ import java.util.concurrent.atomic.AtomicInteger;
                     Reply.setText("Correct!");
                     Guesses.setText("You guessed the number in " + guesses + " guesses!");
                     NewGame.setVisibility(View.VISIBLE);
+                    Score+=(50-(guesses.get()*5));
+                    ScoreText.setText("Score: " + Score);
                 } else if (randomNumber.get() > Integer.parseInt(GuessNumber.getText().toString())) {
                     Reply.setText("Too low!");
                 } else {

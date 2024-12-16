@@ -24,15 +24,6 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".ui.StoryTwoInput.StoryTwoInput"
-            android:exported="true"
-            android:theme="@style/Theme.ProjectShowcase.NoActionBar" />
-        <activity
-            android:name=".ui.StoryThreeInput.StoryThreeInput"
-            android:exported="true"
-            android:theme="@style/Theme.ProjectShowcase.NoActionBar" />
-
 
 
 

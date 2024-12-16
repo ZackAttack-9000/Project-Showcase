@@ -53,11 +53,7 @@ public class GalleryFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         SelectWords();
     }
-
-    public void onSubmitStory() {
-        StoryOneInput storyOneInput = new StoryOneInput();
-        storyOneInput.SubmitStory();
-    }
+    
 
     public void SelectWords(){
         Button StartOne = requireView().findViewById(R.id.button2);
@@ -73,8 +69,9 @@ public class GalleryFragment extends Fragment {
             LayoutInflater inflater = getLayoutInflater();
             ViewGroup frameLayout = requireView().findViewById(R.id.frameLayout);
             View inflate = inflater.inflate(R.layout.fragment_story_one_input, frameLayout);
+            Intent intent = new Intent(getActivity(), StoryOneInput.class);
             inflate.setVisibility(View.VISIBLE);
-
+            startActivity(intent);
         });
 
         StartTwo.setOnClickListener(v -> {
@@ -98,6 +95,7 @@ public class GalleryFragment extends Fragment {
             View inflate = inflater.inflate(R.layout.fragment_story_three_input, frameLayout);
             inflate.setVisibility(View.VISIBLE);
         });
+
 
         Random.setOnClickListener(v -> {
             Random RandInt = new Random();

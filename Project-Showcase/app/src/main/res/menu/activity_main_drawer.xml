@@ -14,16 +14,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Mad Libs (Broken)" />
+            android:title="Mad Libs" />
         <item
             android:id="@+id/nav_scifi"
             android:icon="@drawable/baseline_co_present"
             android:title="Scifi Name Generator" />
         <item
             android:id="@+id/nav_number_guesser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:icon="@drawable/baseline_123"
             android:title="Number Guessing Game" />
+        <item
+            android:id="@+id/nav_credits"
+            android:icon="@drawable/baseline_source_24"
+            android:title="Credits" />
     </group>
 </menu>
