@@ -18,13 +18,13 @@
     <fragment
         android:id="@+id/nav_mad_libs"
         android:name="com.example.projectshowcase.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:label="Madlibs"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_scifi"
         android:name="com.example.projectshowcase.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:label="ScifiNameGenerator"
         tools:layout="@layout/fragment_slideshow" />
     <fragment
         android:id="@+id/nav_number_guesser"

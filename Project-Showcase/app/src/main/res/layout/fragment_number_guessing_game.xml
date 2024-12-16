@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:labelFor="@+id/nav_number_guesser"
     android:layout_height="match_parent"
-    android:background="#FF6F00"
+    android:background="#106010"
     tools:context=".ui.NumberGuessingGame.NumberGuessingGame">
 
     <TextView
@@ -31,9 +31,10 @@
 
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="wrap_content"
+        android:layout_width="350sp"
         android:layout_height="wrap_content"
-        android:text="Guess a number here!"
+        android:text="Put a number on the line below and try to guess what number between 1-100 the computer picked, you have 10 tries before you lose. Good luck!"
+        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView20"
@@ -43,8 +44,10 @@
 
     <EditText
         android:id="@+id/editTextNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="50sp"
+        android:textAlignment="center"
+        android:hint="Enter Guess Here"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"

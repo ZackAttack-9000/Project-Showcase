@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Mad Libs" />
+            android:title="Mad Libs (Broken)" />
         <item
             android:id="@+id/nav_scifi"
             android:icon="@drawable/baseline_co_present"

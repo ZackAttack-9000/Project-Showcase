@@ -4,19 +4,128 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#106010"
     tools:context=".ui.slideshow.SlideshowFragment">
 
     <TextView
-        android:id="@+id/text_slideshow"
-        android:layout_width="match_parent"
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:text="SCIFI name generator"
+        android:textColor="#000000"
+        android:textSize="38sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/space2"
+        tools:ignore="HardcodedText" />
+
+    <Space
+        android:id="@+id/space2"
+        android:layout_width="10sp"
+        android:layout_height="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText10"
+        android:layout_width="fill_parent"
+        android:layout_height="50sp"
+        android:ems="10"
+        android:hint="First"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/editTextText11"
+        android:layout_width="fill_parent"
+        android:layout_height="50sp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+    <EditText
+        android:id="@+id/editTextText12"
+        android:layout_width="fill_parent"
+        android:layout_height="50sp"
+        android:ems="10"
+        android:hint="The City you live in"
+        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView22"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/editTextText13"
+        android:layout_width="fill_parent"
+        android:layout_height="50sp"
+        android:ems="10"
+        android:hint="Your School"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText11"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/editTextText14"
+        android:layout_width="fill_parent"
+        android:layout_height="50sp"
+        android:ems="10"
+        android:hint="Pet's Name"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/Sibling"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText12"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/Sibling"
+        android:layout_width="fill_parent"
+        android:layout_height="50sp"
+        android:ems="10"
+        android:hint="Sibling's Name"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/textView24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText12"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="320sp"
+        android:layout_height="70sp"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#000000"
+        android:text="Generate"
+        app:layout_constraintBottom_toTopOf="@+id/textView24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sibling" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -52,15 +52,26 @@ import java.util.concurrent.atomic.AtomicInteger;
             AtomicInteger guesses = new AtomicInteger();
 
             Guess.setOnClickListener(v -> {
+                Reply.setText("");
+                Guesses.setText("");
+                NewGame.setVisibility(View.INVISIBLE);
                 guesses.getAndIncrement();
                 GuessNumber.getText().toString();
                 if (randomNumber.get() == Integer.parseInt(GuessNumber.getText().toString())) {
                     Reply.setText("Correct!");
                     Guesses.setText("You guessed the number in " + guesses + " guesses!");
+                    NewGame.setVisibility(View.VISIBLE);
                 } else if (randomNumber.get() > Integer.parseInt(GuessNumber.getText().toString())) {
                     Reply.setText("Too low!");
                 } else {
                     Reply.setText("Too high!");
+                }
+                if(guesses.get() == 10){
+                    Reply.setText("You ran out of guesses!");
+                    Guesses.setText("The number was " + randomNumber);
+                    Reply.setTextSize(35);
+                    Reply.setTextColor(000000);
+                    NewGame.setVisibility(View.VISIBLE);
                 }
             });
             NewGame.setOnClickListener(v -> {
@@ -68,6 +79,7 @@ import java.util.concurrent.atomic.AtomicInteger;
                 guesses.set(0);
                 Reply.setText("");
                 Guesses.setText("");
+                NewGame.setVisibility(View.INVISIBLE);
             });
         }
     }
